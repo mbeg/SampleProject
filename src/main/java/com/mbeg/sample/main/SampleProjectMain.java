@@ -1,4 +1,9 @@
 package com.mbeg.sample.main;
+
+import javax.swing.JFrame;
+
+import com.mbeg.sample.view.SampleProjectMainFrame;
+
 /**
  * 
  */
@@ -14,7 +19,10 @@ public class SampleProjectMain {
 	 */
 	public static void main(String[] args) {
 		
-		System.out.println("Hello my SampleProject!");
+		SampleProjectMainFrame frame = new SampleProjectMainFrame();
+		frame.setSize(600,400);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
 		
 	}
 
