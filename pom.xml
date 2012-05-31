@@ -7,6 +7,8 @@
 	<build>
 		<plugins>
 			<plugin>
+				<!-- with mvn assembly:single, create a runnable jar within main class 
+					in the manifest -->
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>2.2-beta-5</version>
 				<configuration>
