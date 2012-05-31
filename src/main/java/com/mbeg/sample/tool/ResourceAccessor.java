@@ -11,8 +11,7 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
 /**
- * @author timmolter
- * @create Apr 5, 2012
+ * @author mbeg
  */
 public class ResourceAccessor {
 
@@ -25,7 +24,7 @@ public class ResourceAccessor {
 	private final Map<String, ImageIcon> iconCache = new WeakHashMap<String, ImageIcon>();
 
 	/**
-	 * private contructor
+	 * 
 	 */
 	private ResourceAccessor() {
 
