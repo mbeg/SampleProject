@@ -4,12 +4,14 @@
 package com.mbeg.sample.view;
 
 import java.awt.BorderLayout;
+import java.util.Locale;
 import java.util.Properties;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import com.mbeg.sample.tool.BundleAccessor;
 import com.mbeg.sample.tool.ResourceAccessor;
 
 /**
@@ -18,6 +20,11 @@ import com.mbeg.sample.tool.ResourceAccessor;
  */
 public class SampleProjectMainFrame extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7795214309070627986L;
+	
 	private JPanel contentContainer = new JPanel();
 
 	/**
@@ -43,6 +50,12 @@ public class SampleProjectMainFrame extends JFrame {
 		Properties props = ResourceAccessor.getInstance().getProperties("Project.properties");
 		String text = props.getProperty("ApplicationName");
 		lblWithText.setText(text);
+		
+		Locale.setDefault(new Locale("en"));
+		
+		String monat = BundleAccessor.getInstance().getResourceString("Month1");
+		System.out.println(monat);
+		
 		
 		contentContainer.add(lblWithText, BorderLayout.CENTER);
 		
